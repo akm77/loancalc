@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "vashlizingbot"
+name = "loancalc"
 version = "0.1.0"
 description = ""
 authors = ["akm77 <aleksey.kotryakhov@gmail.com>"]
