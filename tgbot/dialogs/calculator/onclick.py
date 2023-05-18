@@ -15,7 +15,7 @@ PROPOSAL = """\
 Срок лизинга (мес) - <b>{loan_period}</b>
 Процентная ставка - <b>{interest_rate} %</b>
 Ежемесячный платеж - <b>{monthly_fee}</b> AED
-<pre>------------------------------</pre>
+<pre>---------------------------------------</pre>
 <pre>{payment_schedule}</pre>
 """
 
