@@ -11,10 +11,10 @@ from tgbot.utils.decimals import format_decimal
 logger = logging.getLogger(__name__)
 
 PROPOSAL = """\
-Сумма лизинга - <b>{amount_string}</b> AED
+Сумма лизинга - <b>{amount_string}</b> {currency}
 Срок лизинга (мес) - <b>{loan_period}</b>
 Процентная ставка - <b>{interest_rate} %</b>
-Ежемесячный платеж - <b>{monthly_fee}</b> AED
+Ежемесячный платеж - <b>{monthly_fee}</b> {currency}
 <pre>---------------------------------------</pre>
 <pre>{payment_schedule}</pre>
 """

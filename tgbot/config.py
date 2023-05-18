@@ -22,6 +22,7 @@ class Settings(BaseSettings):
     default_amount: int
     max_amount: int
     amount_step: int
+    currency: str
 
     class Config:
         @classmethod

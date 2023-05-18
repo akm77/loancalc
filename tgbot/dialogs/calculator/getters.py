@@ -12,6 +12,7 @@ async def calculator_form(dialog_manager: DialogManager, **middleware_data):
     ctx = dialog_manager.current_context()
     start_data = ctx.start_data
     dialog_data = ctx.dialog_data
+    dialog_data["currency"] = config.currency
 
     amount = dialog_data.get("amount") or config.default_amount
     amount = int(amount)
@@ -36,6 +37,7 @@ async def calculator_form(dialog_manager: DialogManager, **middleware_data):
 
     return {"started_by": started_by,
             "amount": format_decimal(amount, delimiter=" ", pre=1),
+            "currency": config.currency,
             "loan_period": loan_period,
             "interest_rate": interest_rate,
             "monthly_fee": dialog_data["monthly_fee"]}

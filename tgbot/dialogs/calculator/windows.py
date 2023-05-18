@@ -9,10 +9,10 @@ CALC_FORM = """\
 Расчет для: {started_by}
 <pre>------------------------------------</pre>
 
-Сумма лизинга - <b>{amount}</b> AED
+Сумма лизинга - <b>{amount}</b> {currency}
 Срок лизинга (мес) - <b>{loan_period}</b>
 Процентная ставка - <b>{interest_rate} %</b>
-Ежемесячный платеж - <b>{monthly_fee}</b> AED
+Ежемесячный платеж - <b>{monthly_fee}</b> {currency}
 <pre>------------------------------------</pre>
 """
 
