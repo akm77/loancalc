@@ -9,6 +9,7 @@ from aiogram_dialog.widgets.text import setup_jinja
 from tgbot.config import settings
 from tgbot.dialogs import setup_dialogs
 from tgbot.handlers.admin import admin_router
+from tgbot.handlers.me import me_router
 from tgbot.handlers.user import user_router
 from tgbot.middlewares.config import ConfigMiddleware, UserDBMiddleware
 from tgbot.models.base import create_db_session
@@ -57,7 +58,8 @@ async def main():
 
     for router in [
         admin_router,
-        user_router
+        user_router,
+        me_router
         # echo_router
     ]:
         dp.include_router(router)
