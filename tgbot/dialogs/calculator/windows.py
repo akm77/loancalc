@@ -7,12 +7,12 @@ from . import states, getters, keyboards
 
 CALC_FORM = """\
 Расчет для: {started_by}
-<pre>------------------------------------</pre>
+<pre>--------------------------------</pre>
 
 Сумма лизинга - <b>{amount}</b> {currency}
 Срок лизинга (мес) - <b>{loan_period}</b>{interest_rate_repr}
 Ежемесячный платеж - <b>{monthly_fee}</b> {currency}
-<pre>------------------------------------</pre>
+<pre>--------------------------------</pre>
 """
 
 
