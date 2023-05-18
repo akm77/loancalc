@@ -29,6 +29,13 @@ async def calculator_form(dialog_manager: DialogManager, **middleware_data):
     interest_rate = int(interest_rate)
     loan_period = int(loan_period)
 
+    admins = config.admins
+    user = dialog_manager.middleware_data.get("event_from_user").id
+    interest_rate_repr = ""
+    if user in admins:
+        interest_rate_repr = "\nПроцентная ставка - <b>{interest_rate} %</b>"
+    dialog_data["interest_rate_repr"] = interest_rate_repr
+
     monthly_fee = annuity_payment(amount, interest_rate, loan_period)
     dialog_data["monthly_fee"] = format_decimal(monthly_fee, delimiter=" ", pre=2)
 
@@ -39,5 +46,5 @@ async def calculator_form(dialog_manager: DialogManager, **middleware_data):
             "amount": format_decimal(amount, delimiter=" ", pre=1),
             "currency": config.currency,
             "loan_period": loan_period,
-            "interest_rate": interest_rate,
+            "interest_rate_repr": interest_rate_repr,
             "monthly_fee": dialog_data["monthly_fee"]}

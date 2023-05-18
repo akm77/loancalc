@@ -57,9 +57,9 @@ async def main():
     setup_dialogs(dp, **defaults)
 
     for router in [
+        me_router,
         admin_router,
         user_router,
-        me_router
         # echo_router
     ]:
         dp.include_router(router)

@@ -12,8 +12,7 @@ logger = logging.getLogger(__name__)
 
 PROPOSAL = """\
 Сумма лизинга - <b>{amount_string}</b> {currency}
-Срок лизинга (мес) - <b>{loan_period}</b>
-Процентная ставка - <b>{interest_rate} %</b>
+Срок лизинга (мес) - <b>{loan_period}</b>{interest_rate_repr}
 Ежемесячный платеж - <b>{monthly_fee}</b> {currency}
 <pre>---------------------------------------</pre>
 <pre>{payment_schedule}</pre>

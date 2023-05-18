@@ -41,6 +41,7 @@ def enter_price(**defaults):
             default=50,
             cycle=True,
             on_value_changed=events.on_interest_rate_changed,
+            when=whenable.is_admin
         ),
         Cancel(Const("<<"),
                on_click=onclick.on_click_exit)

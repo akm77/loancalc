@@ -10,8 +10,7 @@ CALC_FORM = """\
 <pre>------------------------------------</pre>
 
 Сумма лизинга - <b>{amount}</b> {currency}
-Срок лизинга (мес) - <b>{loan_period}</b>
-Процентная ставка - <b>{interest_rate} %</b>
+Срок лизинга (мес) - <b>{loan_period}</b>{interest_rate_repr}
 Ежемесячный платеж - <b>{monthly_fee}</b> {currency}
 <pre>------------------------------------</pre>
 """
